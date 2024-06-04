@@ -1,0 +1,45 @@
+---
+title: "Matrices"
+author: "Diego Barranco"
+date: "2024-02-16"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Matrices
+
+
+e <- 1:10
+
+
+
+# convertimos el vector a matriz
+f <- matrix(e)
+
+dim (e) <- c(2, 5)  # arrange the vector [renglon, columna] as 2 x 5
+e[2,2]
+e[,2]
+e[1,]
+
+# uso de función matrix para generar matrices
+
+g <- matrix(110:119, nrow=5, ncol=2, byrow=T) #byrow llena de columna en columna, por defecto
+rownames (g) <- c("manzanas", "naranja", "piña", "Melon", "Mango")
+colnames (g) <- c("Mercado1", "Mercado2")
+g["piña", "Mercado1"]
+g[, "Mercado1"]
+sum (g[,"Mercado1"])
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
